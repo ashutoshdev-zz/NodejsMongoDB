@@ -1,0 +1,280 @@
+/*jumbotron*/
+@import url(https://fonts.googleapis.com/css?family=Signika);
+@import url(https://fonts.googleapis.com/css?family=Lora);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+.jumbotron-header{
+	position: relative;
+	padding-top: 2px;
+	padding-bottom: 17px;
+	background-color: #ffffff
+}
+
+.background{
+ 	position:absolute;
+  	top: -2px; 
+  	left: -20px;
+  	right:0;
+  	bottom:-26px;
+  	opacity: .3; 
+  	z-index: 1;
+	background: url('/public/images/awake_by_drwhang.jpg') no-repeat left center;
+	background-size: cover;
+	padding-top: 13px;
+	padding-bottom: 6px;
+	margin-bottom: 42px;
+}
+
+.content{
+	position: relative;
+    z-index:2;
+}
+
+/*apply padding only if the min-width of the scree is 1200px*/
+@media (min-width: 1200px) { 
+	#subtitle{
+	padding-left: 82px;
+}
+}
+
+.jumbolinks{
+	z-index:1;
+	left:-25px;
+}
+
+.jumbolinks p {
+	color:#0B3861;
+	font-size:17px !important;
+}
+/*
+#aboutuslink{
+	z-index:2;
+}*/
+
+/*Principals*/
+.consultants:hover .dropdown-menu {
+	display: block;
+	background-color: #FFF4E7;
+}
+
+.julian{
+	font-family: 'Lora', sans-serif;
+	font-size:18px ;
+	background-color:#FFF4E7;
+	top:300px;
+	width:815px;
+	left:-76px;
+}
+
+#principalmodalfooter{
+	text-align:left;
+	font-size:14px ;
+}
+
+/*Careers*/
+.careers:hover .dropdown-menu{
+	display: block;
+	background-color: #FFF4E7;	
+}
+
+#careerdropdown{
+	left:432px;
+	text-align: center;
+}
+
+#dropdowntext-roles{
+	padding-left: 16px;
+}
+
+.dropdown-menu{
+	top:20px;
+	left:-18px;
+	width: 20%;
+}
+
+.dropdown-menu li a{
+	padding-left: 43px;
+}
+
+.modal-roles{
+	font-family: 'Lora', sans-serif;
+	font-size:18px ;
+	background-color:#FFF4E7;
+	top:300px;
+	width:815px;
+	left:-76px;
+}
+
+/*marketing*/
+#marketing{
+	color:#0B3861;
+	padding-top: 0px;
+	padding-bottom: 0px
+	top:0px;
+}
+
+#categories{
+	position:relative;
+	top: 60px;
+	border-top:double #0B3861;
+	padding-top: 74px;
+	padding-bottom: 0px;
+	/*outline:2px solid #ccc;*/
+}
+
+.substance{
+	padding-bottom: 20px;
+	padding-top:0px;
+	color:#0B3861;
+	opacity:0.5;
+}
+
+/*legalandcompliance modal*/
+.legalcompliancemarketing{
+	background-color:#FFF4E7;
+	top:184px;
+}
+
+.legalcomplianceheaderbackground{
+	margin-top:0px;
+	padding-top:70px;
+	background: url('/public/images/facade_by_steeeffiii-d5rz4q0.jpg') no-repeat left center;
+	background-size: cover;
+	opacity:0.4;
+	z-index:1;
+}
+
+#legalcomplianceheadertext {
+	font-family: 'Lora', sans-serif;
+	font-size: 18px;
+	color:#000000;
+	position: inherit;
+	top:-75px;
+	left:15px;
+	width:560px;
+}
+
+.legalcompliancebody {
+	font-family: 'Lora', sans-serif;
+	font-size:18px;
+	position:relative;
+	/*letter-spacing:1px;*/
+	top:-57px;
+	/*font-weight:400;*/
+}
+/*
+.legalcompliancebody h4 {
+	margin-top:20px;
+	padding-top:0px;
+
+}*/
+
+/*.legalcompliancebody p {
+	font-weight:400;	
+}*/
+
+/*documentation modal*/
+.coobackground{
+	margin-top:0px;
+	padding-top:70px;
+	background: url('/public/images/black_king_by_uroskrunic-d35f7hn.jpg') no-repeat left center;
+	background-size: cover;
+	opacity:0.4;
+	z-index:1;
+}
+
+
+/*footer*/
+#footer{
+	position:relative;
+	top: 187px
+}
+
+.contact{
+	position:relative;
+	top: 92px;
+	color: #8B0000;
+	margin-bottom: 0px;
+}
+
+.contact-address{
+	margin-bottom: -5px;
+}
+
+#telephone{
+	margin-left: 0px;
+	padding-left: 0px;
+	left: 0px;
+}
+
+/*buttons*/
+#loginbutton{
+	/*position: relative;*/
+	/*top:-167px;*/
+	/*left:1087px;*/
+	background: none;
+	border: 1px solid #0B3861;
+	padding-top:10px;
+	position:relative;
+	margin-top:44px;
+	margin-right:0px;
+	padding-bottom:0px;
+	margin-bottom:0px;
+	z-index: 1;
+}
+
+.buttontext{
+	color: #0B3861;
+	line-height: 20px;
+	letter-spacing:1px;
+	font-size:19px !important;
+}
+
+/*login modal*/
+
+.loginmodal{
+	background-color:#F5DEC1;
+	width:200px;
+	left:200px;
+	top:222px;
+}
+
+.loginmodaltext{
+	font-size:15px !important;
+	color:#000000;
+	padding-left:1px;
+	letter-spacing: 4px;
+	font-weight:300;
+}
+
+.loginmodalinput{
+	border-radius: 4px;
+}
+
+.loginmodalfooter{
+	padding:0px !important;
+}
+
+#loginmodalclose{
+	position:relative;
+	/*margin-left:-1px !importan;*/
+	padding-left:0px !important;
+	left:9px;
+	right:0px;
+	top:-16px;
+}
+
+/*#loginmodalclosebutton{
+	position:relative;
+	padding-left:-1px !important;
+	left:-29px;
+}*/
+
+#loginmodalsubmitbutton{
+	position:relative;
+	/*margin-left:-1px !importan;*/
+	padding-left:-1px !important;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	left:-111px;
+}

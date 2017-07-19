@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Financial Industry Services">
+    <meta name="author" content="Julian Lim">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <link href="/public/images/Alpha.png" rel="shortcut icon">
+    <title>Alpha Calibration | Legal and Compliance for Financial Institutions</title>
+    <meta name="description" content="Bryant Properties provides a wide range of property management, investment services, and home remodeling." /> 
+</head> 
+</head>
+<body>
+    <div class="row">
+        <div class="col-lg-3">
+            <a href="/"><img class="img-responsive logo" src="/public/images/AlphaCalibration.png"></a>
+        </div>
+
+        <div class="col-lg-9 col-md-9 col-xm-9 hidden-md hidden-xs background">
+        </div>
+    </div>
+
+    <div class="row blankrow">
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2 col-sm-2">
+            {{>leftcolumn}}
+        </div>
+
+        <div class="col-lg-8 col-sm-8">
+            {{{body}}}
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 text-center" data-toggle="modal" data-target="#map"><a href="#">
+                        1302 Prosperity Tower<br>
+                        39 Queen's Road Central<br>
+                        Hong Kong<br>
+                        +85236203287<br>
+                        info@alphacalibration.com</a>
+                    </div>
+                </div>
+
+                {{!-- MODAL --}}
+                <div id="map" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-lg-8 Flexible-container">
+                                        <iframe width="500" height="350" frameborder="0" scrolling="no" marginheight="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.8785099238444!2d114.15403745087781!3d22.28259148526077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040064ae73caf5%3A0x5b4229942867dfda!2sProsperity+Tower%2C+39+Queen&#39;s+Road+Central%2C+Central!5e0!3m2!1sen!2shk!4v1448507186923"></iframe>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <p class="text-justify">1302 Prosperity Tower<br>
+                                        39 Queen's Road Central<br>
+                                        Hong Kong<br></p>
+                                        <p class="modaladdress text-justify">+85236203287<br>
+                                        info@alphacalibration.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-sm-2">
+            {{>rightcolumn}}
+        </div>
+    </div>
+
+</body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/public/js/scripts.js"></script>
+</html>

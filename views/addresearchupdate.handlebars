@@ -1,0 +1,144 @@
+{{!-- <div class="container"> --}}
+<div>
+    <h3 class="text-center">{{user.username}}</h3>
+</div>
+<div class="bs-example bs-example-tabs" data-example-id="togglable-tabs"> 
+    <ul id="myTabs" class="nav nav-tabs" role="tablist"> 
+        <li role="presentation" class="active">
+            <a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true"> <h4 class="text-center">Legislation</h4></a>
+        </li>
+        <div class="logout_btn">
+            <a class="new_logout" href="/logout">Log-out</a>
+            <a class="new_logout" href="/addresearch">Home</a>
+        </div>
+    </ul>          
+</div>   
+{{#if error}}
+<div class="alert alert-danger">{{error}}</div>
+{{/if}}
+<div class="smart-container" >
+    <div class="col-sm-8">
+        <div class="tab-content" id="myTabContent">
+            <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab"> 
+                <form class="form-horizontal" action="/postupdateldata" method="post" role="form">
+                    <div class="form-group">
+                        <label class="control-label col-lg-4" for="mainheading">Name</label>
+                        <div class="col-lg-8">
+                            <input type="text" name="mainheading" class="form-control" value="{{result.sldata.mainheading}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-lg-4" for="subheading">Heading</label>
+                        <div class="col-lg-8">
+                            <input type="text" name="subheading" class="form-control" value="{{result.sldata.subheading}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-lg-4" for="surname">Section</label>
+                        <div class="col-lg-8">
+                            <input type="text" name="section" class="form-control" value="{{result.sldata.section}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-lg-4" for="text">Summary</label>
+                        <div class="col-lg-8">
+                            <input type="text" name="summary" class="form-control" value="{{result.sldata.summary}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-lg-4" for="text">Text</label>
+                        <div class="col-lg-8">
+                              <textarea name="text" class="form-control">{{result.sldata.text}}</textarea>
+                            <input type="hidden" name="id" class="form-control" value="{{result.sldata._id}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-lg-4" for="text">Select Policy</label>
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p>Choose Relevant Policy</p>
+                                    <select class="form-control" name="policy" multiple="multiple">                                         
+                                        {{#each result.podata}}
+                                        <option value="{{_id}}">{{policyname}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p>Already Selected Relevant Policy</p>
+                                    <select class="form-control" multiple="multiple"> 
+                                        {{#each result.selectdata}} 
+                                        <option selected>{{this}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-lg-4" for="text">Select Procedure</label>
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p>Choose Relevant Procedure</p>
+                                    <select class="form-control" name="procedure"  multiple="multiple">                              
+                                        {{#each result.prodata}}
+                                        <option  value="{{_id}}">{{procedurename}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p>Already Selected Relevant Procedure</p>
+                                    <select class="form-control"  multiple="multiple">                              
+                                        {{#each result.selectprodata}}
+                                        <option selected>{{this}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="text" class="control-label col-lg-4"></label>
+                        <div class="col-lg-8">
+                            <button type="submit" class="btn btn-success">Update Legislation</button>
+                            <button class="btn btn-success" type="button"><a href="/deleteldata/{{result.sldata._id}}" id="{{result.sldata._id}}">Delete</a></button>                   
+                            <button class="btn btn-success" type="button"><a href="/addresearchdata/{{result.sldata._id}}" id="{{result.sldata._id}}">Download</a></button>               
+                            <button class="btn btn-danger" id="deleteemployee" type="reset">Clear</button>
+                            <!--                        <button class="btn btn-danger" id="deleteemployee" data-id={{employee._id}}>Delete</button><br>-->
+                        </div>             
+                    </div>
+                </form>
+            </div>  
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="nano-content">
+            <ul class="gw-nav gw-nav-list">
+                <!--            <li class="init-un-active"> <a href="javascript:void(0)"> <span class="gw-menu-text">Navigation Menu</span> </a> </li>-->
+                <li class="init-arrow-down"> <a href="javascript:void(0)"> <span class="gw-menu-text">Legislation</span> <b class="gw-arrow"></b> </a>
+                    <ul class="gw-submenu">
+                        {{#each result.ldata}}
+                        <li> <a href="/updateldata/{{_id}}" id="{{_id}}">{{mainheading}}</a> </li>                 
+                        {{/each}}
+                    </ul>
+                </li>
+                <li class="init-arrow-down"> <a href="javascript:void(0)"> <span class="gw-menu-text">Policy</span> <b class="gw-arrow icon-arrow-up8"></b> </a>
+                    <ul class="gw-submenu">
+                        {{#each result.podata}}
+                        <li> <a href="/updatepodata/{{_id}}" id="{{_id}}">{{policyname}}</a> </li>                 
+                        {{/each}}
+                    </ul>
+                </li>
+                <li class="init-arrow-down"> <a href="javascript:void(0)"> <span class="gw-menu-text">Procedure</span> <b></b> </a>
+                    <ul class="gw-submenu">
+                        {{#each result.prodata}}
+                        <li> <a href="/updateprodata/{{_id}}" id="{{_id}}">{{procedurename}}</a> </li>                 
+                        {{/each}}
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>

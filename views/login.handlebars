@@ -1,0 +1,124 @@
+<div class="container-fluid">
+    <div class="col-lg-12">
+        {{!-- note that the form is submitted using the 'post' method without jquery because the page wasn't rendering otherwise--}}
+        <div class="panel panel-default">
+            <div class="panel panel-heading">
+                <div>
+                    <h3>Login</h>
+                </div>
+            </div>
+           {{#if error}}
+    <div class="alert alert-danger">{{error}}</div>
+{{/if}}
+            <div class="panel panel-body">
+                <form class="form-horizontal" id="login"  role="form"  action="/login" name="frm" method="post">
+                    <div class="form-group">	
+                        <label class="col-lg-2 control-label" for="email">Email</label>
+                        <div class="col-lg-6">
+                            <input type="text" name="email"  value="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="password">Password</label>
+                        <div class="col-lg-6">	
+                            <input type="password"  value="" name="password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-4 col-lg-offset-2">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-6 col-lg-offset-2">	
+                            <p data-toggle="modal" data-target="#forgot"><a href='#'>Forgot password</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-6 col-lg-offset-2">	
+                            <p data-toggle="modal" data-target="#signup"><a href='#'>Don't Have an Account?</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="forgot" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="panel panel-heading">
+                    <div>
+                        <h3>Forget password</h>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" id="forget" role="form" action="/forgot" method="post">
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label" for="email">E-mail</label>
+                            <div class="col-lg-6">	
+                                <input type="text" name="email" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-6 col-lg-offset-4">	
+                                <button type="submit" class="btn btn-primary">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="signup" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="panel panel-heading">
+                    <div>
+                        <h3>Sign Up</h>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" id="signupa" role="form" action="/signup" method="post">
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label" for="email">E-mail:</label>
+                            <div class="col-lg-6">	
+                                <input type="text" name="email" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label" for="password">Password:</label>
+                            <div class="col-lg-6">	
+                                <input type="password" name="password" class="form-control">
+                            </div>
+                        </div>
+                          <div class="form-group">
+                            <label class="col-lg-4 control-label" for="confirmPassword">Confirm Password:</label>
+                            <div class="col-lg-6">	
+                                <input type="password" name="confirmPassword" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label" for="name">Full Name:</label>
+                            <div class="col-lg-6">	
+                                <input type="text" name="name" class="form-control">
+                            </div>
+                        </div>                     
+                        <div class="form-group">
+                             <div class="col-lg-4 col-lg-offset-2">
+                                <button type="submit" class="btn btn-primary">Sign Up</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
